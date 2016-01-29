@@ -5,5 +5,5 @@ inputs:
   - name: spring-music-repo
 run:
   path: ls
-  args: ["-al"]
+  args: ["-al -R"]
 TERM: xterm
