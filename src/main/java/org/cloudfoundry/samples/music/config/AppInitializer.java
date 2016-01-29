@@ -15,6 +15,7 @@ import javax.servlet.ServletRegistration;
 
 public class AppInitializer implements WebApplicationInitializer {
 
+    
     @Override
     public void onStartup(ServletContext container) throws ServletException {
         configureAppContextInitializers(container, SpringApplicationContextInitializer.class.getName());
