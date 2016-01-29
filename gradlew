@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "WTF Mate"
+exit 0
+
 ##############################################################################
 ##
 ##  Gradle start up script for UN*X
