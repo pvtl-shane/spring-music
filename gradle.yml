@@ -6,4 +6,4 @@ inputs:
 run:
   path: spring-music-repo/gradlew
   args: ["tasks"]
-  TERM: xterm
+TERM: xterm
