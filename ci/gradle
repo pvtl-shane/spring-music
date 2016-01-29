@@ -1,4 +1,4 @@
-#! bin/bash
+#! bin/sh
 
 cd spring-music-repo
 ./gradlew clean test
