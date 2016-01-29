@@ -1,0 +1,9 @@
+---
+platform: linux
+image: "docker:///java"
+inputs:
+  - name: spring-music-repo
+run:
+  path: spring-music-repo/ci/gradle
+  args: [""]
+  TERM: xterm
