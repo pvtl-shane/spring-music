@@ -4,6 +4,6 @@ image: "docker:///java"
 inputs:
   - name: spring-music-repo
 run:
-  path: spring-music-repo/gradle
+  path: spring-music-repo/run_gradle
   args: [""]
   TERM: xterm
