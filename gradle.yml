@@ -5,4 +5,3 @@ inputs:
   - name: spring-music-repo
 run:
   path: ./spring-music-repo/run_gradle
-TERM: xterm
