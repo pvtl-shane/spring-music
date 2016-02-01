@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd spring-music-repo
-./gradlew clean test assemble
+./gradlew clean test jar
