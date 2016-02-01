@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 cd spring-music-repo
-TERM=xterm ./gradlew clean test
+./gradlew clean test

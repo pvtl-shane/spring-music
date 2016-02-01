@@ -1,6 +1,8 @@
 ---
 platform: linux
 image: "docker:///java"
+params:
+  TERM: xterm
 inputs:
   - name: spring-music-repo
 run:
