@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd spring-music-repo
+
+curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
+./cf --version

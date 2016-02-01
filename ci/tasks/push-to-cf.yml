@@ -1,0 +1,5 @@
+---
+platform: linux
+image: "docker:///ubuntu"
+run:
+  path: ./spring-music-repo/ci/scripts/push-to-cf

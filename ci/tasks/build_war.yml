@@ -1,9 +1,0 @@
----
-platform: linux
-image: "docker:///java"
-params:
-  TERM: xterm
-inputs:
-  - name: spring-music-repo
-run:
-  path: ./spring-music-repo/ci/scripts/build_war
