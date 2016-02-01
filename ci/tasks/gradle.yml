@@ -6,4 +6,4 @@ params:
 inputs:
   - name: spring-music-repo
 run:
-  path: ./spring-music-repo/run_gradle
+  path: ./spring-music-repo/ci/scripts/run_gradle
