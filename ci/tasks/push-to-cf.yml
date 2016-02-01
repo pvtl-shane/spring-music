@@ -3,5 +3,6 @@ platform: linux
 image: "docker:///ubuntu"
 inputs:
   - name: spring-music-repo
+  - name: spring-music-war
 run:
   path: ./spring-music-repo/ci/scripts/push-to-cf
