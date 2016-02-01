@@ -2,5 +2,6 @@
 
 cd spring-music-repo
 
-curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
+wget -O cf.tgz  --post-data="" "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github"
+tar -zx cf.tgz
 ./cf --version
