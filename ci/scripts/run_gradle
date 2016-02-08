@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION = `cat spring-music-version/number`
+VERSION=`cat spring-music-version/number`
 
 echo "$VERSION"
 
