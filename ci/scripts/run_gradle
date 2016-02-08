@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 
-VERSION = `cat spring-music-version/number`
-
 cd spring-music-repo
-./gradlew clean test build -Pwar_version="$VERSION"
+./gradlew clean test build

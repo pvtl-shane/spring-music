@@ -15,7 +15,7 @@ resources:
   type: s3
   source:
     bucket: metropolis-concourse
-    regexp: spring-music-(.*).war
+    regexp: spring-music.war
     access_key_id: {{s3-access-token}}
     secret_access_key: {{s3-secret-key}}
 
@@ -62,7 +62,7 @@ jobs:
   - task: build
     file: spring-music-repo/ci/tasks/build.yml
   - put: spring-music-war
-    params: {file: spring-music-repo/build/libs/spring-music-*.war}
+    params: {file: spring-music-repo/build/libs/spring-music.war}
 #    - put: spring-music-version
 #      params: {file: spring-music-version/number}
 

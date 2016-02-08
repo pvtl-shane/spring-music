@@ -5,6 +5,5 @@ params:
   TERM: xterm
 inputs:
   - name: spring-music-repo
-  - name: spring-music-version
 run:
   path: ./spring-music-repo/ci/scripts/run_gradle
