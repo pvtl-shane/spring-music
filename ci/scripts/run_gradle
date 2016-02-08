@@ -11,5 +11,5 @@ cd spring-music-repo
 ls -al build/libs/
 
 echo "Moving to $HUH"
-mv "build/libs/spring-music-$VERSION.war" "$HUH/"
-ls "$HUH"
+mv "build/libs/spring-music-$VERSION.war" "$HUH/spring-music-repo/"
+ls "$HUH/spring-music-repo"

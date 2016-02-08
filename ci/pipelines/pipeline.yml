@@ -62,7 +62,7 @@ jobs:
   - task: build
     file: spring-music-repo/ci/tasks/build.yml
   - put: spring-music-war
-    params: {file: spring-music-repo/spring-music-*.war}
+    params: {file: spring-music-repo/spring-music-*}
   - put: spring-music-version
     params: {file: spring-music-version/number}
 
