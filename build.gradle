@@ -135,7 +135,7 @@ task wrapper(type: Wrapper) {
 }
 
 war {
-    version = ""
+    version = "$war_version"
 }
 
 tomcatRun {

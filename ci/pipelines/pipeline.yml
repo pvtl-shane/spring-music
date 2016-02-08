@@ -1,21 +1,21 @@
 ---
 resources:
-#- name: spring-music-version
-#  type: semvar
-#  source:
-#    driver: s3
-#    bucket: metropolis-concourse
-#    key: semvar
-#    access_key_id: {{s3-access-token}}
-#    secret_access_key: {{s3-secret-key}}
-#    region_name: us-east-1
-#    initial_version: 1.0.0
+- name: spring-music-version
+  type: semver
+  source:
+    driver: s3
+    bucket: metropolis-concourse
+    key: semvar
+    access_key_id: {{s3-access-token}}
+    secret_access_key: {{s3-secret-key}}
+    region_name: us-east-1
+    initial_version: 1.0.0
 
 - name: spring-music-war
   type: s3
   source:
     bucket: metropolis-concourse
-    regexp: spring-music.war
+    regexp: spring-music(.*).war
     access_key_id: {{s3-access-token}}
     secret_access_key: {{s3-secret-key}}
 
@@ -57,14 +57,14 @@ jobs:
   plan:
   - get: spring-music-repo
     trigger: true
-#    - get: spring-music-version
-#      params: {bump: minor}
+  - get: spring-music-version
+    params: {bump: minor}
   - task: build
     file: spring-music-repo/ci/tasks/build.yml
   - put: spring-music-war
-    params: {file: spring-music-repo/build/libs/spring-music.war}
-#    - put: spring-music-version
-#      params: {file: spring-music-version/number}
+    params: {file: spring-music-repo/build/libs/spring-music-*.war}
+  - put: spring-music-version
+    params: {file: spring-music-version/number}
 
 #- name: deploy-to-dev
 #  plan:
