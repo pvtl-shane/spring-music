@@ -2,6 +2,8 @@
 
 VERSION = `cat spring-music-version/number`
 
+echo "$VERSION"
+
 cd spring-music-repo
 ./gradlew clean test build -Pwar_version="$VERSION"
 ls -al build/libs/
