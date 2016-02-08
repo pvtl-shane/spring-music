@@ -12,7 +12,7 @@ resources:
     initial_version: 1.0.0
 
 - name: spring-music-war
-  type: type: s3
+  type: s3
   source:
     bucket: metropolis-concourse
     regexp: spring-music-(.*).war
@@ -33,24 +33,24 @@ resources:
 #    password: {{cf-password}}
 #    organization: {{cf-dev-organization}}
 #    space: {{cf-dev-space}}
-    
+#
 #- name: cf-staging
 #  type: cf
 #  source:
 #    api: {{cf-target}}
-#    username: {{cf-username}}
-#    password: {{cf-password}}
-#    organization: {{cf-staging-organization}}
-#    space: {{cf-staging-space}}
+#    username:
+#    password:
+#    organization:
+#    space:
 #
 #- name: cf-perf
 #  type: cf
 #  source:
-#    api: {{cf-target}}
-#    username: {{cf-username}}
-#    password: {{cf-password}}
-#    organization: {{cf-perf-organization}}
-#    space: {{cf-perf-space}}
+#    api:
+#    username:
+#    password:
+#    organization:
+#    space:
 
 jobs:
 - name: build
@@ -62,7 +62,7 @@ jobs:
     - task: build
       file: spring-music-repo/ci/tasks/build.yml
     - put: spring-music-war
-      params: spring-music-repo/build/libs/spring-music-*.war
+      params: {file: spring-music-repo/build/libs/spring-music-*.war}
     - put: spring-music-version
       params: {file: spring-music-version/number}
 
