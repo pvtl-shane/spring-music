@@ -10,6 +10,6 @@ cd spring-music-repo
 ./gradlew clean test build -Pwar_version="$VERSION"
 ls -al build/libs/
 
-echo "Moving to pwd"
+echo "Moving to $PWD"
 mv "build/libs/spring-music-$VERSION.war" "$PWD/"
 ls "$PWD"
