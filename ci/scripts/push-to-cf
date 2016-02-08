@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-echo "Upload cf task"
-
-#cd spring-music-repo
-#apt-get update && apt-get install -y curl && apt-get clean && rm -rf /var/lib/apt/lists
-#
-#curl -L "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar -zx
-#./cf --version
