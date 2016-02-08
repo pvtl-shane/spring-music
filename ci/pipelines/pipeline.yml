@@ -61,10 +61,10 @@ jobs:
     params: {bump: minor}
   - task: build
     file: spring-music-repo/ci/tasks/build.yml
-  - put: spring-music-war
-    params: {file: spring-music-repo/build/libs/spring-music-*.war}
   - put: spring-music-version
     params: {file: spring-music-version/number}
+  - put: spring-music-war
+    params: {file: spring-music-repo/build/libs/spring-music-*.war}
 
 #- name: deploy-to-dev
 #  plan:
