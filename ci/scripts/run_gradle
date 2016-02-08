@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
 VERSION=`cat spring-music-version/number`
+PWD=`pwd`
 
 echo "$VERSION"
 
 cd spring-music-repo
 ./gradlew clean test build -Pwar_version="$VERSION"
 ls -al build/libs/
+
+echo "Moving to pwd"
+mv "build/libs/spring-music-$VERSION.war" "$PWD/"
+ls "$PWD"
