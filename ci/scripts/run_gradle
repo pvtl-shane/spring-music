@@ -3,6 +3,7 @@
 VERSION=`cat spring-music-version/number`
 PWD=`pwd`
 
+echo "$PWD"
 echo "$VERSION"
 
 cd spring-music-repo
