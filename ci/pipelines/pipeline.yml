@@ -72,7 +72,7 @@ jobs:
       passed: [build]
     - get: spring-music-war
       trigger: true
-    put: cf-dev
+    - put: cf-dev
       params:
         manifest: spring-music-repo/manifests/dev-manifest.yml
         path: spring-music-war/spring-music.war
