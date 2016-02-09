@@ -10,7 +10,7 @@ cd spring-music-repo
 ./gradlew clean test build -Pwar_version="$VERSION"
 ls -al build/libs/
 
-echo "Moving to $HUH"
+echo "Moving to $HUH/art"
 mkdir "$HUH/art"
 mv "build/libs/spring-music-$VERSION.war" "$HUH/art/"
 ls "$HUH/art/"

@@ -6,5 +6,7 @@ params:
 inputs:
   - name: spring-music-repo
   - name: spring-music-version
+outputs:
+  - name: art
 run:
   path: ./spring-music-repo/ci/scripts/run_gradle
