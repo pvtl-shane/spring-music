@@ -75,6 +75,6 @@ jobs:
     - put: cf-dev
       params:
         manifest: spring-music-repo/manifests/dev-manifest.yml
-        path: spring-music-war/spring-music.war
+        path: spring-music-war/spring-music-*.war
     - task: run-functional-tests
       file: spring-music-repo/ci/tasks/functional-tests.yml
