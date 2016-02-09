@@ -25,14 +25,14 @@ resources:
     uri: https://github.com/pvtl-shane/spring-music
     branch: master
     
-#- name: cf-dev
-#  type: cf
-#  source:
-#    api: {{cf-target}}
-#    username: {{cf-username}}
-#    password: {{cf-password}}
-#    organization: {{cf-dev-organization}}
-#    space: {{cf-dev-space}}
+- name: cf-dev
+  type: cf
+  source:
+    api: {{cf-target}}
+    username: {{cf-username}}
+    password: {{cf-password}}
+    organization: {{cf-dev-organization}}
+    space: {{cf-dev-space}}
 #
 #- name: cf-staging
 #  type: cf
@@ -66,14 +66,15 @@ jobs:
   - put: spring-music-version
     params: {file: spring-music-version/number}
 
-#- name: deploy-to-dev
-#  plan:
-#    get: spring-music-repo
-#    get: spring-music-war
-#      trigger: true
-#    put: cf-dev
-#      params:
-#        manifest: spring-music-repo/manifests/dev-manifest.yml
-#        path: spring-music-war/spring-music.war
-#    - task: run-functional-tests
-#      file: spring-music-repo/ci/tasks/functional-tests.yml
+- name: deploy-to-dev
+  plan:
+    - get: spring-music-repo
+      passed: [build]
+    - get: spring-music-war
+      trigger: true
+    put: cf-dev
+      params:
+        manifest: spring-music-repo/manifests/dev-manifest.yml
+        path: spring-music-war/spring-music.war
+    - task: run-functional-tests
+      file: spring-music-repo/ci/tasks/functional-tests.yml
